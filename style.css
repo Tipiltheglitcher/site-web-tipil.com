@@ -1,0 +1,178 @@
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #00ffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  color: #ff0000
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 55px;
+  color: #878282;
+}
+
+.category {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 20px 0;
+  background-color: #0000ff;
+}
+
+.subcategory {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 20px 0;
+  color: #ff0000;
+}
+
+.products {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.product {
+  background-image: url('imageweb1.png');
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border: 2.5px solid #e100ff;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #00ffff;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+}
+
+.product p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.map-code {
+  text-decoration: underline;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.date {
+  text-decoration: underline;
+}
+
+.small-link {
+  font-size: 70%;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .category {
+    font-size: 1.2rem;
+  }
+
+  .product {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .category {
+    font-size: 1.3rem;
+  }
+
+  .product {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .category {
+    font-size: 1.5rem;
+  }
+
+  .product {
+    width: 300px;
+  }
+}
