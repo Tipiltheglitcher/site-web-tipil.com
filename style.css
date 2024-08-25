@@ -10,7 +10,7 @@ p {
 
 /* Style général du body */
 body {
-  background-image: url('images/background.jpg');
+  background-image: url('background.jpg');
   background-size: cover; /* Remplit tout l'écran */
   background-attachment: fixed; 
   background-position: center;
@@ -28,7 +28,7 @@ body {
 }
 
 .product {
-  background-image: url('images/imageweb1.png');
+  background-image: url('imageweb1.png');
   background-size: cover;
   border-radius: 10px;
   padding: 20px;
