@@ -1,3 +1,4 @@
+/* Réinitialisation des marges et des espacements pour tous les éléments */
 body,
 h1,
 h2,
@@ -7,9 +8,12 @@ p {
   padding: 0;
 }
 
+/* Style général du body */
 body {
-  background-image: url('background.jpg');
-  background-size: cover;
+  background-image: url('images/background.jpg');
+  background-size: cover; /* Remplit tout l'écran */
+  background-attachment: fixed; 
+  background-position: center;
   background-repeat: no-repeat;
   color: #00ffff;
   font-family: Arial, sans-serif;
@@ -20,53 +24,96 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.product {
+  background-image: url('images/imageweb1.png');
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border: 2.5px solid #ff00f7;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #00ffff;
+  margin: 10px 0; 
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Superposition sombre pour améliorer la lisibilité */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Réduire l'opacité à 0.2 */
+  z-index: 0;
+}
+
+/* Effet de parallaxe léger */
+body {
+  background-attachment: fixed;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 94%;
+  width: 100%;
   padding: 10px;
   text-align: center;
-  position: relative;
-  margin-bottom: 10px;
+  position: center;
+  top: 0;
+  left: 0;
+  
 }
 
+/* Style du titre principal */
 .title {
   font-size: 2.5rem;
   letter-spacing: 2px;
-  margin: 0 auto;
-  color: #ff0000
+  color: #9900ffff;
+  margin: 0; 
+  display: block;
+  position: absolute; 
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  border-radius: 55px;
-  color: #878282;
-}
 
-.category {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 6px 15px;
-  border: none;
-  border-radius: 10px;
-  margin: 20px 0;
-  background-color: #0000ff;
-}
-
+/* Style des catégories */
+.category,
 .subcategory {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 6px 15px;
-  border: none;
   border-radius: 10px;
   margin: 20px 0;
+}
+
+/* Style spécifique aux catégories */
+.category {
+  background-color: #0000ff;
+  color: #ffffff;
+}
+
+.subcategory {
   color: #ff0000;
 }
 
+/* Style des produits */
 .products {
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,20 +123,7 @@ header {
   width: 100%;
 }
 
-.product {
-  background-image: url('imageweb1.png');
-  background-size: cover;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-  border: 2.5px solid #e100ff;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #00ffff;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+/* Style des éléments produits */
 
 .product h2 {
   font-size: 1.5rem;
@@ -97,82 +131,109 @@ header {
 
 .product p {
   font-size: 1rem;
+  z-index: 1;
   margin-bottom: 10px;
+  position: relative;
 }
 
-.map-code {
-  text-decoration: underline;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-
+.map-code,
 .date {
   text-decoration: underline;
+  position: relative;
+  z-index: 1;
 }
 
 .small-link {
   font-size: 70%;
   font-weight: 400;
   text-decoration: underline;
+  position: relative;
+  z-index: 1;
 }
 
 .link {
   text-decoration: underline;
+  font-weight: 400;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
 }
 
-@media only screen and (max-width: 767px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .category {
-    font-size: 1.2rem;
-  }
-
-  .product {
-    width: 100%;
-    padding: 10px;
-  }
+/* Styles pour le menu de navigation */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px;
+  z-index: 1000;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .title {
-    font-size: 2.2rem;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
-  }
-
-  .category {
-    font-size: 1.3rem;
-  }
-
-  .product {
-    width: 45%;
-  }
+/* Menu par défaut visible sur PC */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Afficher le menu en ligne sur les grands écrans */
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #00ffff;
+  border-radius: 5px;
 }
 
-@media only screen and (min-width: 1024px) {
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .category {
-    font-size: 1.5rem;
-  }
-
-  .product {
-    width: 300px;
-  }
+/* Éléments du menu */
+.menu li {
+  padding: 10px;
 }
+
+.menu a {
+  text-decoration: none;
+  color: #00ffff;
+}
+
+/* Style de l'icône hamburger */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #00ffff;
+  border-radius: 2px;
+  padding: 10px;
+  position: relative;
+  z-index: 1001; /* Assurez-vous que l'icône hamburger est au-dessus du menu */
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+
+.fin {
+  background-color: #000;
+  color: #808080ff;
+  margin: 10;
+  border-radius: 22px;
+  padding: 2px;
+  font-size: 10px;
+}
+
+/* Styles spécifiques aux petits écrans */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Cacher le menu en mode mobile */
+    flex-direction: column; /* Afficher les éléments du menu en colonne */
+    position: absolute;
+    top: 65px; /* Positionner le menu en dessous de l'icône hamburger */
+    right: 10;
+  }
+
+  .menu.show {
+    display: flex; /* Afficher le menu lorsque la classe 'show' est ajoutée */
+  }
+
+  .menu-toggle {
+    display: block; /* Afficher l'icône hamburger sur les petits écrans */
+  }
