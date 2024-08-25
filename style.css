@@ -87,8 +87,20 @@ header {
   margin: 0; 
   display: block;
   position: absolute; 
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 80px;
+  z-index: 1001;
+}
+
+.title2 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #9900ffff;
+  margin: 0; 
+  display: block;
+  position: absolute; 
+  top: 0px;
+  left: 80px;
   z-index: 1001;
 }
 
