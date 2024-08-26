@@ -1,4 +1,3 @@
-/* Réinitialisation des marges et des espacements pour tous les éléments */
 body,
 h1,
 h2,
@@ -8,10 +7,9 @@ p {
   padding: 0;
 }
 
-/* Style général du body */
 body {
   background-image: url('background.jpg');
-  background-size: cover; /* Remplit tout l'écran */
+  background-size: cover; 
   background-attachment: fixed; 
   background-position: center;
   background-repeat: no-repeat;
@@ -49,7 +47,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Superposition sombre pour améliorer la lisibilité */
 body::before {
   content: "";
   position: absolute;
@@ -57,11 +54,10 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Réduire l'opacité à 0.2 */
+  background-color: rgba(0, 0, 0, 0.2); 
   z-index: 0;
 }
 
-/* Effet de parallaxe léger */
 body {
   background-attachment: fixed;
 }
@@ -79,7 +75,6 @@ header {
   
 }
 
-/* Style du titre principal */
 .title {
   font-size: 2.5rem;
   letter-spacing: 2px;
@@ -88,28 +83,10 @@ header {
   display: block;
   position: absolute; 
   top: 0px;
-  left: 80px;
+  left: 660px;
   z-index: 1001;
 }
 
-.title2 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  color: #9900ff;
-  margin: 0;
-  display: flex;
-  align-items: center;   /* Centre verticalement */
-  justify-content: center; /* Centre horizontalement */
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* Centre réellement l'élément */
-  z-index: 1001;
-  text-align: center;
-}
-
-
-/* Style des catégories */
 .category,
 .subcategory {
   font-size: 1.5rem;
@@ -117,19 +94,14 @@ header {
   padding: 6px 15px;
   border-radius: 10px;
   margin: 20px 0;
+  color: #ff0000;
 }
 
-/* Style spécifique aux catégories */
 .category {
   background-color: #0000ff;
   color: #ffffff;
 }
 
-.subcategory {
-  color: #ff0000;
-}
-
-/* Style des produits */
 .products {
   background-size: cover;
   background-repeat: no-repeat;
@@ -138,8 +110,6 @@ header {
   justify-content: center;
   width: 100%;
 }
-
-/* Style des éléments produits */
 
 .product h2 {
   font-size: 1.5rem;
@@ -175,7 +145,6 @@ header {
   z-index: 1;
 }
 
-/* Styles pour le menu de navigation */
 nav {
   position: fixed;
   top: 0;
@@ -187,12 +156,11 @@ nav {
   z-index: 1000;
 }
 
-/* Menu par défaut visible sur PC */
 .menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Afficher le menu en ligne sur les grands écrans */
+  display: flex; 
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #00ffff;
   border-radius: 5px;
@@ -208,7 +176,6 @@ nav {
   color: #00ffff;
 }
 
-/* Style de l'icône hamburger */
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -217,7 +184,7 @@ nav {
   border-radius: 2px;
   padding: 10px;
   position: relative;
-  z-index: 1001; /* Assurez-vous que l'icône hamburger est au-dessus du menu */
+  z-index: 1001; 
 }
 
 .menu-toggle .bar {
@@ -236,7 +203,6 @@ nav {
   font-size: 10px;
 }
 
-/* Styles spécifiques aux petits écrans */
 @media (max-width: 768px) {
   .menu {
     display: none; 
@@ -246,9 +212,27 @@ nav {
     right: 10;
   }
 
-  .title2 {
-    font-size: 2rem;
-  }  /* This was missing */
+  .title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #9900ffff;
+    margin: 0; 
+    display: block;
+    position: absolute; 
+    top: 0px;
+    left: 80px;
+    z-index: 1001;
+  }
+
+  .version {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #9e9e9eff;
+    margin: 0; 
+    display: block;
+    z-index: 1001;
+  }
+  
   .menu.show {
     display: flex; 
   }
