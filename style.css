@@ -248,11 +248,11 @@ nav {
 
   .title2 {
     font-size: 2rem;
-
+  }  /* This was missing */
   .menu.show {
     display: flex; 
   }
-
   .menu-toggle {
-    display: block; 
+    display: block;   
   }
+}
