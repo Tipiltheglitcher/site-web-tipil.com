@@ -203,6 +203,15 @@ nav {
   font-size: 10px;
 }
 
+.version {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #9e9e9eff;
+  margin: 0; 
+  display: block;
+  z-index: 1001;
+}
+
 @media (max-width: 768px) {
   .menu {
     display: none; 
@@ -221,15 +230,6 @@ nav {
     position: absolute; 
     top: 0px;
     left: 80px;
-    z-index: 1001;
-  }
-
-  .version {
-    font-size: 1rem;
-    letter-spacing: 2px;
-    color: #9e9e9eff;
-    margin: 0; 
-    display: block;
     z-index: 1001;
   }
   
