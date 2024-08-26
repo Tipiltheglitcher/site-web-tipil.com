@@ -212,6 +212,15 @@ nav {
   z-index: 1001;
 }
 
+.version2 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #9e9e9eff;
+  margin: 0; 
+  display: block;
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .menu {
     display: none; 
@@ -231,6 +240,24 @@ nav {
     top: 0px;
     left: 80px;
     z-index: 1001;
+  }
+
+  .version {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #9e9e9eff;
+    margin: 0; 
+    display: block;
+    position: relative;
+  }
+  
+  .version2 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #9e9e9eff;
+    margin: 0; 
+    display: block;
+    position: relative;
   }
   
   .menu.show {
