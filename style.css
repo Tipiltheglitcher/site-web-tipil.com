@@ -51,9 +51,11 @@ body-fornite {
 
 body-contact {
   background-image: url('back-contact.jpg');
-  background-size: cover;  
+  background-size: cover; 
+  background-attachment: fixed; 
   background-position: center;
   background-repeat: no-repeat;
+  color: #00ffff;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -63,6 +65,8 @@ body-contact {
   margin: 0;
   padding: 0;
   position: relative;
+  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .product {
