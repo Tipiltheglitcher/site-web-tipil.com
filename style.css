@@ -117,12 +117,13 @@ header {
 .title {
   font-size: 2.5rem;
   letter-spacing: 2px;
-  color: #9900ffff;
-  margin: 0; 
+  color: #9900ff;
+  margin: 0;
   display: block;
-  position: absolute; 
-  top: 0px;
-  left: 660px;
+  position: absolute;
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1001;
 }
 
@@ -304,20 +305,6 @@ nav {
     position: relative;
     overflow-x: hidden;
     overflow: hidden;
-  }
-  
-
-
-  .title {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    color: #9900ffff;
-    margin: 0; 
-    display: block;
-    position: absolute; 
-    top: 0px;
-    left: 80px;
-    z-index: 1001;
   }
 
   .version {
