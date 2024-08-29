@@ -16,7 +16,7 @@ p {
   text-align: center;
 }
 
-body-fornite {
+body-fortnite {
   background-image: url('back-fornite-pc.jpg'); 
   background-size: cover; 
   background-attachment: fixed; 
@@ -46,16 +46,14 @@ body-fornite {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* Place l'image derrière le contenu */
+  z-index: -1; 
 }
 
-body-contact {
+body-rsc {
   background-image: url('back-contact.jpg');
-  background-size: cover; 
-  background-attachment: fixed; 
+  background-size: cover;  
   background-position: center;
   background-repeat: no-repeat;
-  color: #00ffff;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -65,8 +63,6 @@ body-contact {
   margin: 0;
   padding: 0;
   position: relative;
-  overflow-x: hidden;
-  overflow: hidden;
 }
 
 .product {
@@ -285,7 +281,7 @@ nav {
 }
 
 @media (max-width: 768px) {
-  body-fornite{
+  body-fortnite{
     background-image: url('back-fornite-mobile.jpg');
     background-size: cover; 
     background-attachment: fixed; 
