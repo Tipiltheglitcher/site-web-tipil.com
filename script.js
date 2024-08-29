@@ -17,6 +17,9 @@ document.addEventListener('keydown', function(event) {
   if (event.key === 'F12' || event.keyCode === 123) {
     event.preventDefault();
   }
+  if (event.key === 'F11' || event.keyCode === 123) {
+    event.preventDefault();
+  }
 });
 document.addEventListener('contextmenu', function(event) {
   event.preventDefault();
