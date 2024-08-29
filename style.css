@@ -219,24 +219,29 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; 
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid #00ffff;
-  border-radius: 5px;
+  display: flex; /* Les éléments sont en ligne sur PC */
+  background-color: transparent; /* On retire le fond commun */
+  gap: 10px; /* Espacement entre les éléments */
 }
 
 /* Éléments du menu */
 .menu li {
-  padding: 10px;
+  padding: 10px 15px; /* Espacement interne des éléments */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond distinct pour chaque élément */
+  border: 1px solid #00ffff; /* Bordure pour chaque élément */
+  border-radius: 5px; /* Coins arrondis */
 }
 
+/* Style des liens du menu */
 .menu a {
   text-decoration: none;
   color: #00ffff;
+  display: block; /* Pour remplir tout l'espace cliquable */
 }
 
+/* Style pour le bouton du menu hamburger */
 .menu-toggle {
-  display: none;
+  display: none; /* Caché sur les grands écrans */
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #00ffff;
@@ -301,13 +306,7 @@ nav {
     overflow: hidden;
   }
   
-  .menu {
-    display: none; 
-    flex-direction: column; 
-    position: absolute;
-    top: 65px; 
-    right: 10;
-  }
+
 
   .title {
     font-size: 2.5rem;
@@ -338,11 +337,34 @@ nav {
     display: block;
     position: relative;
   }
-  
-  .menu.show {
-    display: flex; 
+
+  .menu {
+    display: flex; /* Afficher le menu par défaut pour que la transition puisse fonctionner */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transform: translateX(100%); 
+    opacity: 0;
+    visibility: hidden; 
+    transition: transform 0.75s ease, opacity 0.75s ease, visibility 0.75s ease;
   }
+
+  .menu.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu li {
+    width: 100%;
+    margin: 5px 0;
+  }
+
   .menu-toggle {
-    display: block;   
+    display: block;
   }
 }
